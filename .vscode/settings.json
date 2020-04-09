@@ -1,0 +1,12 @@
+{
+    "C_Cpp.autoAddFileAssociations": false,
+    "C_Cpp.default.configurationProvider": "go2sh.cmake-integration",
+    "cmake.cpptools.guessSourceFileConfigurations": true,
+
+    "files.associations": {
+        ".clang-format": "yaml",
+        ".clang-tidy": "yaml"
+    },
+
+    "restructuredtext.confPath": ""
+}

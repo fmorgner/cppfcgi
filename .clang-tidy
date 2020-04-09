@@ -1,0 +1,7 @@
+Checks: 'cppcoreguidelines-*,clang-analyzer-*,modernize-*'
+FormatStyle: 'file'
+WarningsAsErrors: '*'
+HeaderFilterRegex: 'cppfcgi/.*\.hpp'
+CheckOptions:
+  - key:             modernize-use-auto.MinTypeNameLength
+    value:           '0'

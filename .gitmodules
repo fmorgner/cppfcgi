@@ -1,0 +1,6 @@
+[submodule "asio"]
+	path = lib/asio
+	url = https://github.com/chriskohlhoff/asio.git
+[submodule "CUTE"]
+	path = test/lib/cute
+	url = https://github.com/PeterSommerlad/CUTE
