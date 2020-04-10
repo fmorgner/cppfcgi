@@ -1,0 +1,36 @@
+os: linux
+language: python
+python: "3.7"
+dist: bionic
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'ppa:ubuntu-toolchain-r/test'
+      - sourceline: 'deb https://apt.kitware.com/ubuntu/ bionic main'
+        key_url: 'https://apt.kitware.com/keys/kitware-archive-latest.asc'
+    packages:
+      - g++-8
+      - cmake
+
+compiler:
+  - gcc
+
+cache:
+  directories:
+    - $HOME/.conan/data
+
+before_install:
+  - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 20
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 20
+  - sudo update-alternatives --config gcc
+  - sudo update-alternatives --config g++
+
+install:
+  - pip install conan
+  - conan user
+
+script:
+  - /usr/bin/cmake -S . -B build -DCMAKE_BUILD_TYPE=RelWithDebInfo
+  - /usr/bin/cmake --build build --target all --parallel $(nproc)
+  - /usr/bin/cmake --build build --target test
