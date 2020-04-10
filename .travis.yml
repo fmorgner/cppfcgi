@@ -31,6 +31,6 @@ install:
   - conan user
 
 script:
-  - /usr/bin/cmake -S . -B build -DCMAKE_BUILD_TYPE=RelWithDebInfo
+  - /usr/bin/cmake -S . -B build -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=YES
   - /usr/bin/cmake --build build --target all --parallel $(nproc)
   - /usr/bin/cmake --build build --target test
