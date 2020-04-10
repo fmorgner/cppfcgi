@@ -10,7 +10,7 @@ CPPFCGI - FastCGI for modern C++
 
 .. |license| image:: https://img.shields.io/github/license/fmorgner/cppfcgi
    :alt: GitHub license
-   :target: https://github.com/fmorgner/newtype/blob/master/LICENSE
+   :target: LICENSE
    
 .. |btc| image:: https://img.shields.io/badge/Support-BTC-yellow
    :alt: Support the project with Bitcoin
