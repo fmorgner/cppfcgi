@@ -35,7 +35,7 @@ add_library("${PROJECT_NAME}"
   ".clang-format"
   ".clang-tidy"
 
-  "src/dummy.cpp"
+  "src/error.cpp"
 )
 
 set_target_properties("${PROJECT_NAME}" PROPERTIES
@@ -74,7 +74,7 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
   add_executable("${PROJECT_NAME}_tests"
     "${PROJECT_SOURCE_DIR}/test/src/driver.cpp"
 
-    "${PROJECT_SOURCE_DIR}/test/src/dummy_suite.cpp"
+    "${PROJECT_SOURCE_DIR}/test/src/error_suite.cpp"
   )
 
   target_include_directories("${PROJECT_NAME}_tests" SYSTEM PRIVATE

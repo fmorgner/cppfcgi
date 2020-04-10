@@ -1,4 +1,4 @@
-#include "cppfcgi/dummy_suite.hpp"
+#include "cppfcgi/error_suite.hpp"
 
 #include <cute/cute.h>
 #include <cute/cute_runner.h>
@@ -45,7 +45,7 @@ int main(int argc, char ** argv)
   using namespace std::string_literals;
 
   auto suites = std::vector{
-      dummy_suite(),
+      error_suite(),
   };
 
   auto selectors = get_test_selectors(suites);

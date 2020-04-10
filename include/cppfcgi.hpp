@@ -1,6 +1,6 @@
 #ifndef CPPFCGI_HPP
 #define CPPFCGI_HPP
 
-#include "cppfcgi/dummy.hpp"
+#include "cppfcgi/error.hpp"
 
 #endif
