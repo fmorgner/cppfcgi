@@ -12,6 +12,8 @@ addons:
     packages:
       - g++-8
       - cmake
+      - clang-tidy-9
+      - clang-format-9
 
 compiler:
   - gcc
@@ -23,8 +25,12 @@ cache:
 before_install:
   - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 20
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 20
+  - sudo update-alternatives --install /usr/bin/clang-tidy clang-tidy /usr/bin/clang-tidy-9 20
+  - sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-9 20
   - sudo update-alternatives --config gcc
   - sudo update-alternatives --config g++
+  - sudo update-alternatives --config clang-tidy
+  - sudo update-alternatives --config clang-format
 
 install:
   - pip install conan
