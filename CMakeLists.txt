@@ -36,6 +36,7 @@ add_library("${PROJECT_NAME}"
   ".clang-tidy"
 
   "src/error.cpp"
+  "src/record.cpp"
 )
 
 set_target_properties("${PROJECT_NAME}" PROPERTIES
@@ -75,6 +76,7 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
     "${PROJECT_SOURCE_DIR}/test/src/driver.cpp"
 
     "${PROJECT_SOURCE_DIR}/test/src/error_suite.cpp"
+    "${PROJECT_SOURCE_DIR}/test/src/record_suite.cpp"
   )
 
   target_include_directories("${PROJECT_NAME}_tests" SYSTEM PRIVATE

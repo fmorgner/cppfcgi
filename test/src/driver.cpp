@@ -1,4 +1,5 @@
 #include "cppfcgi/error_suite.hpp"
+#include "cppfcgi/record_suite.hpp"
 
 #include <cute/cute.h>
 #include <cute/cute_runner.h>
@@ -46,6 +47,7 @@ int main(int argc, char ** argv)
 
   auto suites = std::vector{
       error_suite(),
+      record_suite(),
   };
 
   auto selectors = get_test_selectors(suites);
