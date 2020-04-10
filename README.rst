@@ -2,11 +2,11 @@
 CPPFCGI - FastCGI for modern C++
 ================================
 
-|c++20| |license| |travisci| |btc|
+|c++17| |license| |travisci| |btc|
 
-.. |c++20| image:: https://img.shields.io/badge/c%2B%2B-20-orange
-   :alt: C++20
-   :target: https://en.wikipedia.org/wiki/C%2B%2B20
+.. |c++17| image:: https://img.shields.io/badge/c%2B%2B-17-orange
+   :alt: C++17
+   :target: https://en.wikipedia.org/wiki/C%2B%2B17
 
 .. |license| image:: https://img.shields.io/github/license/fmorgner/cppfcgi
    :alt: GitHub license
